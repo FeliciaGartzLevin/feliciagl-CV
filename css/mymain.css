@@ -1,0 +1,32 @@
+header{
+  text-align: center;
+}   
+
+.navbar{
+    list-style: none;
+        }
+
+.navbar li{
+    display: inline;
+    padding: 5px;
+}
+
+nav{
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(147, 17, 17);
+}
+
+img{
+    justify-content: center;
+}
+
+
+@media screen and (min-width:600px){
+
+
+        
+}
