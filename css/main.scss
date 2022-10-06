@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --yellow: #fefe00a3;
+    --strong-yellow: #FEFE00;
+    --navbar-color: rgb(99, 174, 95);
+}
+
+/* nästa steg är att grida layouten responsivt
+därefter kan jag pilla med allt smått och 
+snygga effekter, färger, bilder, mm */
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    list-style: none;
+}
+
+header{
+    background-color:var(--navbar-color);
+//     position: fixed;
+//     top: 0;
+//     width: 100%;
+
+}
+
+
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+a.nav-link{
+        font-weight: 500;
+        box-shadow: inset 0 0 0 0 var(--strong-yellow);
+        color: white;
+        margin: 0 -.25rem;
+        padding: 0 .25rem;
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+      }
+      a:hover {
+        box-shadow: inset 100px 0 0 0 var(--strong-yellow);
+        color: var(--navbar-color);
+      }
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 6px auto;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media(max-width: 768px) {
+
+    // NAVMENU
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;    
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);  
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);  
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: var(--navbar-color);
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: 0.3s;
+        // kan sätta en background på denna t ex 
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+   
+    
+    
+}
+
+// Windows: Ctrl + K + U för att  uncomment code
+
+
+
+
+
+
+
+
+
+// body{
+//     background-image: url('https://images.unsplash.com/photo-1597495529689-45d6da6fcbac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80'), linear-gradient(rgba(255, 255, 255, 0.459), rgba(246, 246, 246, 0.305));
+// }
+
+// @media screen and (min-width: 650px) {
+
+// .grid-system{
+//     display: grid;
+//     grid-template-columns: 0.1fr auto 2fr;
+//     grid-template-rows: 3fr auto 3fr 0.1;
+//     /* grid-template-areas: 
+//     "side kontakt navbar"
+//     "side photo header"
+//     "side sidebar main"
+//     ". sidebar footer"; */
+// }
+
+// .kontakt{
+//     grid-area: kontakt;
+//     background-color: var(--yellow);
+//     grid-column: 2 / 3;
+//     grid-row: 1 / 2;
+//     text-align: right;
+// }
+// .navbar{
+//     grid-area: navbar;
+//     grid-column: 3 / 4;
+//     grid-row: 1 / 2;
+
+// }
+// .photo{
+//     grid-area: photo;
+//     grid-column: 2 / 3;
+//     grid-row: 2 / 3;
+//     z-index: 5;
+//     margin-bottom: 0;
+//     padding-bottom: 0;
+// }
+// header{
+//     grid-area: header;
+//     background-color: var(--yellow);
+//     grid-column: 1 / 4;
+//     grid-row: 2 / 3;
+//     display: grid;
+//     grid-template-columns: 0.7fr 1.5fr 0.5fr;
+//     grid-template-rows: 1fr;
+// }
+
+// .header-text{
+//     grid-column: 2 / 3;
+//     grid-row: 1 / 2;
+// }
+
+
+// .sidebar{
+//     grid-area: sidebar;
+//     background-color: var(--yellow);
+//     grid-column: 2 / 3;
+//     grid-row: 3 / 5;
+// }
+
+// .main{
+//     grid-area: main;
+//     grid-column: 3 / 4;
+//     grid-row: 3 / 4;
+//     margin-left: 20px;
+//     // använd denna i main för att scrolla https://alvarotrigo.com/blog/css-animations-scroll/
+// }
+
+
+// .footer{
+//     grid-area: footer;
+//     grid-column: 3 / 4;
+//     grid-row: 4 / 5;
+// }
+// }
+
+
+// // ----------------
+
+
+
+
+
+// .navbar{
+//     list-style: none;
+//         }
+
+// .navbar li{
+//     display: inline;
+//     padding: 5px;
+// }
+
+// nav{
+//     justify-content: space-between;
+// }
+
+
+
+// img{
+//     justify-content: center;
+// } 
+
+
+// // @media screen and (min-width:600px){}
