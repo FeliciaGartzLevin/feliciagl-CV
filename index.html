@@ -1,25 +1,18 @@
-<!doctype html>
-<html class="no-js" lang="sw">
-
+<!DOCTYPE html>
+<html lang="sv">
 <head>
-  <meta charset="utf-8">
-  <title>Felicia Gartz Levin CV</title>
-  <meta name="description" content="Felicia Gartz Levin - CV">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felicia Gartz Levin - CV</title>
 
-  <meta property="og:title" content="Felicia Gartz Levin CV">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="assets/profilbild.jpg">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+    <meta property="og:title" content="Felicia Gartz Levin CV">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="assets/profilbild.jpg">
 
-  <link rel="stylesheet" href="css/main.css">
-  
-
-  <meta name="theme-color" content="#fafafa">
+    <link rel="stylesheet" href="../css/main.css"/>
 </head>
 <body>
 <!-- gör CVt lite som min LinkedIn, med en bakgrundsbild 
@@ -28,8 +21,6 @@
 
     <div class="grid-system">
         <header>
-            <!-- <img class="background-pic" src="assets/yellow-background.jpg" alt="Färgglada färgfläckar"> -->
-            <!-- <div class="background-pic"></div> -->
             <nav class="navbar">
                 <a href="#" class="nav-logo">FGL</a>
 
@@ -44,20 +35,37 @@
                     <span class="bar"></span>
                 </div>
             </nav>
-            <section class="header-section">
-                <div class="photo">
-                    <img src="assets/profilbild.jpg" alt="profilbild av Felicia Gartz Levin" width="300px">
-                </div>
-                <div class="header-text">
-                        <h1>Felicia Gartz Levin</h1>
-                        <h4>Front End Developer Student</h4>
-                        <p>Jag valde utbildningen Front End Developer eftersom jag tror att yrket är stimulerande och roligt, 
-                            med mycket problemlösning och skapande. Jag tror även att jobbet är fritt och flexibelt.</p> 
-                </div>
-            </section>
+            <div class="grid-top">
+                <section class="header-section">
+                    <div class="profile-pic">
+                        <img class="profile-pic" src="assets/profilbild.jpg" alt="profilbild av Felicia Gartz Levin" width="300px">
+                    </div>
+                    <div class="header-text">
+                            <h1>Felicia Gartz Levin</h1>
+                            <h4>Front End Developer Student</h4>      
+                    </div>
+                </section>
+                <section class="social">
+                    <div class="social-icons-top">
+                        <ul>
+                            <li><a href="mailto:felicia.gartz.levin@gmail.com"><i class="fa-regular fa-envelope"></i></a></li>
+                            <li><a href="tel:+46708840650"><i class="fa-regular fa-phone"></i></a></li>
+                            <li><a href="https://github.com/FeliciaGartzLevin"><i class="fa-brands fa-github"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/felicia-gartz-levin-922334240/"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href="homepage"><i class="fa-regular fa-house"></i></a></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
         </header>
         <main>
             <div class="main"></div>
+            <div>
+                <p>Jag valde utbildningen Front End Developer eftersom jag tror att yrket är stimulerande och roligt, 
+                    med mycket problemlösning och skapande. Jag tror även att jobbet är fritt och flexibelt.
+                </p> 
+            </div>
+
             <div>
                 <h2>Utbildning</h2>
                 <h3>Front End Developer</h3>
@@ -113,10 +121,12 @@
                 <h2>Kontakt</h2>
                 <p>    
                 <ul>
-                    <!-- lägg in icons här och lägg till github och linkedin -->
-                    <li><a href="mailto:felicia.gartz.levin@gmail.com">email</a></li>
-                    <li><a href="tel:+46708840650">phone</a></li>
-                    <li><a href="web">webpage</a></li>
+                    <!-- icons funkar inte? -->
+                    <li><a href="mailto:felicia.gartz.levin@gmail.com"><i class="fa-regular fa-envelope"></i></a></li>
+                    <li><a href="tel:+46708840650"><i class="fa-regular fa-phone"></i></a></li>
+                    <li><a href="https://github.com/FeliciaGartzLevin"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/felicia-gartz-levin-922334240/"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="homepage"><i class="fa-regular fa-house"></i></a></li>
                 </ul>
                 </p>
             </div>
@@ -124,5 +134,6 @@
     </div>    
 
 <script src="js/script.js"></script> 
+<script src="https://kit.fontawesome.com/44fc62139d.js" crossorigin="anonymous"></script>
 </body>
 </html>

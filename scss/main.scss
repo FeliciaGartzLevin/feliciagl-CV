@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+// @import './layout';
 
-:root{
-    --yellow: #fefe00a3;
-    --strong-yellow: #FEFE00;
-    --navbar-color: #5360A4;
-}
+$yellow: #fefe00a3;
+$strong-yellow: #FEFE00;
+$navbar-color: #5360A4;
+$main-textcolor: white;
+
 
 /* nästa steg är att grida layouten responsivt
 därefter kan jag pilla med allt smått och 
@@ -13,46 +14,54 @@ snygga effekter, färger, bilder, mm
 kanske kan göra dark theme? mha sån function som ändrar färg efter bakgrundsdarkness*/
 
 
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
 }
 
 a{
     text-decoration: none;
-    color: white;
+    color: $main-texcolor;
 }
 
 li{
     list-style: none;
 }
 
-.navbar{
-    background-color:var(--navbar-color);
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
 header{
-    background-image: url('../assets/pears.jpg'), linear-gradient(rgba(255, 255, 255, 0.173), rgba(255, 255, 255, 0.173));
+    // background-image: url('../assets/pears.jpg'), linear-gradient(rgba(83, 96, 164, 0.8), rgba(83, 96, 164, 0.8));
+    background-color: $navbar-color;
     background-position: center;
     background-size: cover;
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-repeat: no-repeat;
 }
 
+img.profile-pic{
+    border-radius: 50%;
+}
+
+.grid-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
 .navbar{
+    z-index: 3;
     min-height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 24px;
+    background-color: $navbar-color;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .nav-menu{
@@ -60,19 +69,20 @@ header{
     justify-content: space-between;
     align-items: center;
     gap: 60px;
+    
 }
 
 a.nav-link{
         font-weight: 500;
-        box-shadow: inset 0 0 0 0 var(--strong-yellow);
-        color: white;
+        box-shadow: inset 0 0 0 0 $strong-yellow;
+        color: $main-texcolor;
         margin: 0 -.25rem;
         padding: 0 .25rem;
         transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
       }
       a:hover {
-        box-shadow: inset 100px 0 0 0 var(--strong-yellow);
-        color: var(--navbar-color);
+        box-shadow: inset 100px 0 0 0 $strong-yellow;
+        color: $navbar-color;
       }
 
 .hamburger{
@@ -88,8 +98,13 @@ a.nav-link{
     border-radius: 5px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: white;
+    background-color: $main-texcolor;
 }
+
+footer{
+    color: $main-textcolor;
+}
+
 
 @media(max-width: 768px) {
 
@@ -115,7 +130,7 @@ a.nav-link{
         gap: 0;
         flex-direction: column;
         justify-content: flex-start;
-        background-color: var(--navbar-color);
+        background-color: $navbar-color;
         width: 100%;
         height: 100vh;
         text-align: center;

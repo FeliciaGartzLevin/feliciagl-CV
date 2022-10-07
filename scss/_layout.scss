@@ -1,0 +1,37 @@
+
+
+.grid-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.social-icons-top{
+    display: flex;
+    flex-direction: column;
+    
+
+    a:hover{
+        background-color: transparent;
+    }
+}
+
+
+.header-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    gap: 10px;
+
+    .header-text{
+        text-align: center;
+        border-radius: 10px;
+        padding: 20px;
+        
+    }
+}
+
