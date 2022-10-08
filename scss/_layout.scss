@@ -1,37 +1,65 @@
 
 
-.grid-top{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+
+// .social-icons-top{
+//     display: flex;
+//     flex-direction: column;
     
+
+//     a:hover{
+//         background-color: transparent;
+//     }
+// }
+
+
+
+.top-container{
+    position: inherit;
+    top: 50vh;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-template-rows: 10vh 10vh;
+    grid-template-areas: 
+    ". header-section ."
+    "social-icons . scroll";
 }
 
-.social-icons-top{
-    display: flex;
-    flex-direction: column;
-    
-
-    a:hover{
-        background-color: transparent;
+.social-icons{
+    grid-area: social-icons;
+    margin-left: 10%;
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
     }
 }
-
 
 .header-section{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 30%;
-    gap: 10px;
-
-    .header-text{
-        text-align: center;
-        border-radius: 10px;
-        padding: 20px;
-        
-    }
+    grid-area: header-section;
+    gap: 4rem;
+    text-align: center;
 }
+
+.scroll{
+    grid-area: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+  }
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
 

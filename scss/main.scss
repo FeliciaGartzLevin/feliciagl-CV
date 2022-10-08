@@ -1,10 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-// @import './layout';
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&family=Titillium+Web:wght@200;400;600&display=swap');
+@import './layout';
+
+
 
 $yellow: #fefe00a3;
 $strong-yellow: #FEFE00;
 $navbar-color: #5360A4;
+$darker-navbar-color: #3b4578;
 $main-textcolor: white;
+$font-family-Oswald: 'Oswald', sans-serif;
+$font-family-Titillium: 'Titillium Web', sans-serif;
+$font-weights: (
+    "thin": 200,
+    "regular": 400,
+    "bold": 600
+);
+$lighter-navbar-color: #a8b1db;
 
 
 /* nästa steg är att grida layouten responsivt
@@ -14,16 +25,16 @@ snygga effekter, färger, bilder, mm
 kanske kan göra dark theme? mha sån function som ändrar färg efter bakgrundsdarkness*/
 
 
-
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: $font-family-Titillium;
 }
 
 a{
     text-decoration: none;
-    color: $main-texcolor;
+    color: $main-textcolor;
 }
 
 li{
@@ -40,20 +51,66 @@ header{
     min-height: 100vh;
     background-repeat: no-repeat;
 }
+.nav-logo{
+    font-size: 1.5rem;
+}
 
 img.profile-pic{
     border-radius: 50%;
 }
 
-.grid-top{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.header-text{
+    color: $main-textcolor;
+
+    h1{
+        font-size: 2.4rem;
+        font-family: $font-family-Titillium;
+    }
+
+    h2{
+        font-family: $font-family-Oswald;
+        padding-top: 0.4rem;
+        font-size: 1.25rem;
+        font-weight: map-get($font-weights, regular);
+    }
 }
+
+a.social-links{
+    transition: all 0.3s ease-in-out, transform 0.2s;
+
+    &:hover{
+        background-color: none;
+        color: $darker-navbar-color;
+        text-decoration: none;
+        transform: scale(1.1);
+      }
+}
+
+/* funkar ej
+.social-icons::after{
+    background-color: $main-textcolor;
+    content: '';
+    width: 32px;
+    height: 2px;
+    transform: rotate(90deg), translate(16px, 3px);
+}  */
+
+.scroll{
+    transform: rotate(90deg);
+    text-transform: lowercase;
+    color: $main-textcolor;
+    opacity: 0.4;
+    // &:after{
+    //     content: '➡';
+    // }
+    // fixa pilen så den kommer på samma rad
+}
+
+// -----------------NAVBAR--------------------
 
 .navbar{
     z-index: 3;
-    min-height: 70px;
+    min-height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -75,12 +132,12 @@ img.profile-pic{
 a.nav-link{
         font-weight: 500;
         box-shadow: inset 0 0 0 0 $strong-yellow;
-        color: $main-texcolor;
+        color: $main-textcolor;
         margin: 0 -.25rem;
         padding: 0 .25rem;
-        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+        transition: color .2s ease-in-out, box-shadow .3s ease-in-out;
       }
-      a:hover {
+      a.nav-link:hover {
         box-shadow: inset 100px 0 0 0 $strong-yellow;
         color: $navbar-color;
       }
@@ -98,17 +155,89 @@ a.nav-link{
     border-radius: 5px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: $main-texcolor;
+    background-color: $main-textcolor;
 }
+
+// ----------- ABOUT SECTION-----------------
+
+main{
+    background-color: $lighter-navbar-color;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+
+.text-box{
+    background-color: $navbar-color;
+    color: $main-textcolor;
+    padding: 1rem;
+    margin: 1rem;
+    width: 97%;
+
+    .heading{
+        display: flex;
+        justify-content: space-between;
+        span{
+            font-weight: map-get($font-weights, regular);
+            text-align: right;
+            font-size: 1rem;
+            color: $lighter-navbar-color;
+        }
+    }
+
+    p{
+        padding: 0.5rem 0;
+        
+        &:not(:last-child):before{
+            content: '💙';
+            width: 50px;
+            // vill göra ett indrag i texten
+        }
+    }
+}
+
+.reveal {
+    position: relative;
+    opacity: 0;
+  }
+  .reveal.active {
+    opacity: 1;
+  }
+  .active.fade-bottom {
+    animation: fade-bottom 1s ease-in;
+  }
+  .active.fade-left {
+    animation: fade-left 1s ease-in;
+  }
+  .active.fade-right {
+    animation: fade-right 1s ease-in;
+  }
+
+  @keyframes fade-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+//   ------------------SKILLS ETC--------------
+
+// --------------------FOOTER-----------------
 
 footer{
     color: $main-textcolor;
 }
 
 
+
+
 @media(max-width: 768px) {
 
-    // NAVMENU
+    // -------------NAVMENU-------------
     .hamburger{
         display: block;
     }
@@ -145,8 +274,6 @@ footer{
     .nav-menu.active{
         left: 0;
     }
-   
-    
     
 }
 
