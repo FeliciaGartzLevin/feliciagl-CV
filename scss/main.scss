@@ -187,15 +187,13 @@ main{
 
     p{
         padding: 0.5rem 0;
-        
-        &:not(:last-child):before{
-            content: '💙';
-            width: 50px;
-            // vill göra ett indrag i texten
-        }
     }
-}
 
+    // .text-box-p{
+    //     padding-left: 0.6rem;
+    //     }
+
+}
 .reveal {
     position: relative;
     opacity: 0;
@@ -205,12 +203,6 @@ main{
   }
   .active.fade-bottom {
     animation: fade-bottom 1s ease-in;
-  }
-  .active.fade-left {
-    animation: fade-left 1s ease-in;
-  }
-  .active.fade-right {
-    animation: fade-right 1s ease-in;
   }
 
   @keyframes fade-bottom {
