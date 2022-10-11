@@ -8,6 +8,9 @@ $strong-yellow: #FEFE00;
 $navbar-color: #5360A4;
 $darker-navbar-color: #3b4578;
 $main-textcolor: white;
+$lighter-navbar-color: #a8b1db;
+$dark-text-color: black;
+$skillbar-fillcolor: rgb(244, 76, 224);
 $font-family-Oswald: 'Oswald', sans-serif;
 $font-family-Titillium: 'Titillium Web', sans-serif;
 $font-weights: (
@@ -15,9 +18,6 @@ $font-weights: (
     "regular": 400,
     "bold": 600
 );
-$lighter-navbar-color: #a8b1db;
-$dark-text-color: black;
-
 
 /* nästa steg är att grida layouten responsivt
 därefter kan jag pilla med allt smått och 
@@ -131,14 +131,14 @@ a.social-links{
 
 a.nav-link{
         font-weight: 500;
-        box-shadow: inset 0 0 0 0 $strong-yellow;
+        box-shadow: inset 0 0 0 0 $skillbar-fillcolor;
         color: $main-textcolor;
         margin: 0 -.25rem;
         padding: 0 .25rem;
         transition: color .2s ease-in-out, box-shadow .3s ease-in-out;
       }
       a.nav-link:hover {
-        box-shadow: inset 100px 0 0 0 $strong-yellow;
+        box-shadow: inset 100px 0 0 0 $skillbar-fillcolor;
         color: $navbar-color;
       }
 
@@ -171,8 +171,8 @@ main{
     background-color: $navbar-color;
     color: $main-textcolor;
     padding: 1rem;
-    margin: 1rem;
-    width: 97%;
+    margin: 1rem 0;
+    width: 100%;
 
     .heading{
         display: flex;
@@ -190,9 +190,11 @@ main{
         padding: 0.5rem 0;
     }
 
+    & > .heading:not(first-child){
+        margin-top: 0.8rem;
+    }
+
 }
-
-
 
 .reveal {
     position: relative;
@@ -222,7 +224,7 @@ main{
     border: 5px solid $main-textcolor;
 }
 
-.sidebar > div{
+.sidebar-container{
     background-color: $navbar-color;
     color: $main-textcolor;
     border: 5px solid $main-textcolor;
@@ -233,16 +235,71 @@ main{
         border: 5px solid $main-textcolor;
     }
 
-}
+    &.skills > h2:nth-child(1){
+        margin-bottom: 1rem;
+    }
 
-// gör sådana här skillbars
-// - kanske med linear gradient färg i den fyllda baren
-// https://www.foolishdeveloper.com/2021/08/animated-skills-bar-html-css.html
+}
 
 .sidebar > div:nth-child(2){
     background-color: $lighter-navbar-color;
     color: $dark-text-color;  
 }
+
+// ------------skillbars------------------------
+
+.skillcontainer{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.skillbar{
+    position: relative;
+    border-radius: 20px;
+    background-color: $main-textcolor;
+  
+}
+.skillbar div{
+    position: relative;
+    width: 0;
+    height: 0.5rem;
+    border-radius: 10px;
+    background-color: $skillbar-fillcolor;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+
+}
+
+.skillcontainer2{
+    margin: 0.5rem 0;
+}
+
+#html-bar{
+    animation: html-fill 2s forwards;
+}
+@keyframes html-fill{
+    100%{
+        width: 75%;
+    }
+}
+
+#css-bar{
+    animation: css-fill 2s forwards;
+}
+@keyframes css-fill{
+    100%{
+        width: 50%;
+    }
+}
+
+#js-bar{
+    animation: js-fill 2s forwards;
+}
+@keyframes js-fill{
+    100%{
+        width: 1%;
+    }
+}
+
+// -------skillbars end-----
 
 img.lang{
     
@@ -255,6 +312,7 @@ img.lang{
 
 li.hobbies > i{
     padding-right: 0.5rem;
+    color: $skillbar-fillcolor;
 
 }
 

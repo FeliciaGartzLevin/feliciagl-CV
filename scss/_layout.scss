@@ -1,18 +1,4 @@
 
-
-
-// .social-icons-top{
-//     display: flex;
-//     flex-direction: column;
-    
-
-//     a:hover{
-//         background-color: transparent;
-//     }
-// }
-
-
-
 .top-container{
     position: inherit;
     top: 50vh;
@@ -65,22 +51,17 @@
   }
 
 
-    
-    // & > div{
-    //     margin: 1rem;
-    // }
-
-
 @media(min-width: 768px) {
     .text-container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin: 5% 0;
     }
 
     .sidebar{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-content: center;
-        
     }
 }
