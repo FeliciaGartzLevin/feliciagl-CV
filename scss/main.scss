@@ -16,6 +16,7 @@ $font-weights: (
     "bold": 600
 );
 $lighter-navbar-color: #a8b1db;
+$dark-text-color: black;
 
 
 /* nästa steg är att grida layouten responsivt
@@ -76,12 +77,11 @@ img.profile-pic{
 }
 
 a.social-links{
-    transition: all 0.3s ease-in-out, transform 0.2s;
+    transition: all .2s ease-in-out; 
 
     &:hover{
         background-color: none;
         color: $darker-navbar-color;
-        text-decoration: none;
         transform: scale(1.1);
       }
 }
@@ -177,6 +177,7 @@ main{
     .heading{
         display: flex;
         justify-content: space-between;
+        gap: 0.8rem;
         span{
             font-weight: map-get($font-weights, regular);
             text-align: right;
@@ -189,11 +190,10 @@ main{
         padding: 0.5rem 0;
     }
 
-    // .text-box-p{
-    //     padding-left: 0.6rem;
-    //     }
-
 }
+
+
+
 .reveal {
     position: relative;
     opacity: 0;
@@ -218,12 +218,82 @@ main{
 
 //   ------------------SKILLS ETC--------------
 
+.sidebar{
+    border: 5px solid $main-textcolor;
+}
+
+.sidebar > div{
+    background-color: $navbar-color;
+    color: $main-textcolor;
+    border: 5px solid $main-textcolor;
+    padding: 1rem;
+    transition: all .2s ease-in-out; 
+    &:hover { 
+        transform: scale(1.03); 
+        border: 5px solid $main-textcolor;
+    }
+
+}
+
+// gör sådana här skillbars
+// - kanske med linear gradient färg i den fyllda baren
+// https://www.foolishdeveloper.com/2021/08/animated-skills-bar-html-css.html
+
+.sidebar > div:nth-child(2){
+    background-color: $lighter-navbar-color;
+    color: $dark-text-color;  
+}
+
+img.lang{
+    
+    // content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Sweden.svg/1280px-Flag_of_Sweden.svg.png');
+    width: 0.8rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+li.hobbies > i{
+    padding-right: 0.5rem;
+
+}
+
 // --------------------FOOTER-----------------
 
 footer{
     color: $main-textcolor;
+    background-color: $darker-navbar-color;
+    min-height: 40vh;
+    padding: 1rem;
 }
 
+ul.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+p.footer{
+    margin-top: 1rem;
+
+}
+
+.li-footer > i{
+    padding-right: 0.5rem;
+}
+
+a.footer-links{
+    transition: all 0.3s ease-in-out, transform 0.2s;
+    padding-right: 0.5rem;
+
+    &:hover{
+        background-color: none;
+        color: $navbar-color;
+        text-decoration: none;
+        transform: scale(1.1);
+    }
+}
 
 
 
@@ -247,7 +317,7 @@ footer{
     .nav-menu{
         position: fixed;
         left: -100%;
-        top: 70px;
+        top: 50px;
         gap: 0;
         flex-direction: column;
         justify-content: flex-start;

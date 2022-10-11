@@ -64,19 +64,23 @@
     opacity: 1;
   }
 
-.sidebar{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
+
     
-    & > div{
-        margin: 1rem;
-    }
-}
+    // & > div{
+    //     margin: 1rem;
+    // }
+
 
 @media(min-width: 768px) {
     .text-container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        
     }
 }
