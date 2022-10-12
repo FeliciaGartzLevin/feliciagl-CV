@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&family=Titillium+Web:wght@200;400;600&display=swap');
 @import './layout';
 
-
-
 $yellow: #fefe00a3;
 $strong-yellow: #FEFE00;
 $navbar-color: #5360A4;
@@ -11,6 +9,7 @@ $main-textcolor: white;
 $lighter-navbar-color: #a8b1db;
 $dark-text-color: black;
 $skillbar-fillcolor: rgb(244, 76, 224);
+$toned-skillbar-color: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
 $font-family-Oswald: 'Oswald', sans-serif;
 $font-family-Titillium: 'Titillium Web', sans-serif;
 $font-weights: (
@@ -18,13 +17,6 @@ $font-weights: (
     "regular": 400,
     "bold": 600
 );
-
-/* nästa steg är att grida layouten responsivt
-därefter kan jag pilla med allt smått och 
-snygga effekter, färger, bilder, mm 
-
-kanske kan göra dark theme? mha sån function som ändrar färg efter bakgrundsdarkness*/
-
 
 *{
     box-sizing: border-box;
@@ -58,6 +50,8 @@ header{
 
 img.profile-pic{
     border-radius: 50%;
+    width: 18rem;
+    height: 18rem;
 }
 
 .header-text{
@@ -98,8 +92,8 @@ a.social-links{
 .scroll{
     transform: rotate(90deg);
     text-transform: lowercase;
-    color: $main-textcolor;
-    opacity: 0.4;
+    color: $lighter-navbar-color;
+    width: 100px;
     // &:after{
     //     content: '➡';
     // }
@@ -131,14 +125,14 @@ a.social-links{
 
 a.nav-link{
         font-weight: 500;
-        box-shadow: inset 0 0 0 0 $skillbar-fillcolor;
+        box-shadow: inset 0 0 0 0 $strong-yellow;
         color: $main-textcolor;
         margin: 0 -.25rem;
         padding: 0 .25rem;
         transition: color .2s ease-in-out, box-shadow .3s ease-in-out;
       }
       a.nav-link:hover {
-        box-shadow: inset 100px 0 0 0 $skillbar-fillcolor;
+        box-shadow: inset 100px 0 0 0 $strong-yellow;
         color: $navbar-color;
       }
 
@@ -157,6 +151,49 @@ a.nav-link{
     transition: all 0.3s ease-in-out;
     background-color: $main-textcolor;
 }
+
+// kommenterar ut navbaren då den inte behövs (för få menyval)
+// @media(max-width: 768px) {
+
+//     // -------------NAVMENU-------------
+//     .hamburger{
+//         display: block;
+//     }
+
+//     .hamburger.active .bar:nth-child(2){
+//         opacity: 0;    
+//     }
+//     .hamburger.active .bar:nth-child(1){
+//         transform: translateY(8px) rotate(45deg);  
+//     }
+//     .hamburger.active .bar:nth-child(3){
+//         transform: translateY(-8px) rotate(-45deg);  
+//     }
+
+//     .nav-menu{
+//         position: fixed;
+//         left: -100%;
+//         top: 50px;
+//         gap: 0;
+//         flex-direction: column;
+//         justify-content: flex-start;
+//         background-color: $navbar-color;
+//         width: 100%;
+//         height: 100vh;
+//         text-align: center;
+//         transition: 0.3s;
+//         // kan sätta en background på denna t ex linear gradient från ovan så att den fasar ner i annan färg 
+//     }
+
+//     .nav-item{
+//         margin: 16px 0;
+//     }
+
+//     .nav-menu.active{
+//         left: 0;
+//     }
+    
+// }
 
 // ----------- ABOUT SECTION-----------------
 
@@ -264,7 +301,7 @@ main{
     height: 0.5rem;
     border-radius: 10px;
     background-color: $skillbar-fillcolor;
-    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    background: $toned-skillbar-color;
 
 }
 
@@ -305,14 +342,13 @@ img.lang{
     
     // content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Sweden.svg/1280px-Flag_of_Sweden.svg.png');
     width: 0.8rem;
-    height: auto;
+    height: 0.8rem;
     border-radius: 50%;
 }
 
 
 li.hobbies > i{
     padding-right: 0.5rem;
-    color: $skillbar-fillcolor;
 
 }
 
@@ -351,164 +387,8 @@ a.footer-links{
         text-decoration: none;
         transform: scale(1.1);
     }
+
+    & > i{
+        padding-right: 0.5rem;
+    }
 }
-
-
-
-@media(max-width: 768px) {
-
-    // -------------NAVMENU-------------
-    .hamburger{
-        display: block;
-    }
-
-    .hamburger.active .bar:nth-child(2){
-        opacity: 0;    
-    }
-    .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);  
-    }
-    .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);  
-    }
-
-    .nav-menu{
-        position: fixed;
-        left: -100%;
-        top: 50px;
-        gap: 0;
-        flex-direction: column;
-        justify-content: flex-start;
-        background-color: $navbar-color;
-        width: 100%;
-        height: 100vh;
-        text-align: center;
-        transition: 0.3s;
-        // kan sätta en background på denna t ex 
-    }
-
-    .nav-item{
-        margin: 16px 0;
-    }
-
-    .nav-menu.active{
-        left: 0;
-    }
-    
-}
-
-// Windows: Ctrl + K + U för att  uncomment code
-
-
-
-
-
-
-
-
-
-// body{
-//     background-image: url('https://images.unsplash.com/photo-1597495529689-45d6da6fcbac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80'), linear-gradient(rgba(255, 255, 255, 0.459), rgba(246, 246, 246, 0.305));
-// }
-
-// @media screen and (min-width: 650px) {
-
-// .grid-system{
-//     display: grid;
-//     grid-template-columns: 0.1fr auto 2fr;
-//     grid-template-rows: 3fr auto 3fr 0.1;
-//     /* grid-template-areas: 
-//     "side kontakt navbar"
-//     "side photo header"
-//     "side sidebar main"
-//     ". sidebar footer"; */
-// }
-
-// .kontakt{
-//     grid-area: kontakt;
-//     background-color: var(--yellow);
-//     grid-column: 2 / 3;
-//     grid-row: 1 / 2;
-//     text-align: right;
-// }
-// .navbar{
-//     grid-area: navbar;
-//     grid-column: 3 / 4;
-//     grid-row: 1 / 2;
-
-// }
-// .photo{
-//     grid-area: photo;
-//     grid-column: 2 / 3;
-//     grid-row: 2 / 3;
-//     z-index: 5;
-//     margin-bottom: 0;
-//     padding-bottom: 0;
-// }
-// header{
-//     grid-area: header;
-//     background-color: var(--yellow);
-//     grid-column: 1 / 4;
-//     grid-row: 2 / 3;
-//     display: grid;
-//     grid-template-columns: 0.7fr 1.5fr 0.5fr;
-//     grid-template-rows: 1fr;
-// }
-
-// .header-text{
-//     grid-column: 2 / 3;
-//     grid-row: 1 / 2;
-// }
-
-
-// .sidebar{
-//     grid-area: sidebar;
-//     background-color: var(--yellow);
-//     grid-column: 2 / 3;
-//     grid-row: 3 / 5;
-// }
-
-// .main{
-//     grid-area: main;
-//     grid-column: 3 / 4;
-//     grid-row: 3 / 4;
-//     margin-left: 20px;
-//     // använd denna i main för att scrolla https://alvarotrigo.com/blog/css-animations-scroll/
-// }
-
-
-// .footer{
-//     grid-area: footer;
-//     grid-column: 3 / 4;
-//     grid-row: 4 / 5;
-// }
-// }
-
-
-// // ----------------
-
-
-
-
-
-// .navbar{
-//     list-style: none;
-//         }
-
-// .navbar li{
-//     display: inline;
-//     padding: 5px;
-// }
-
-// nav{
-//     justify-content: space-between;
-// }
-
-
-
-// img{
-//     justify-content: center;
-// } 
-
-
-// // @media screen and (min-width:600px){}

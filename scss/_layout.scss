@@ -1,4 +1,21 @@
 
+
+
+// .social-icons-top{
+//     display: flex;
+//     flex-direction: column;
+    
+
+//     a:hover{
+//         background-color: transparent;
+//     }
+// }
+
+// "Sidan ska gå att zooma in och zooma ut, utan att layouten 
+// "tappar det"/slutar fungera (Ctrl/Cmd + och – i webbläsaren)."
+// fungerar väl sådär. fråga Mikko på fredag
+
+
 .top-container{
     position: inherit;
     top: 50vh;
@@ -28,6 +45,7 @@
     grid-area: header-section;
     gap: 4rem;
     text-align: center;
+    padding-left: 15px;
 }
 
 .scroll{
@@ -36,7 +54,24 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+
+    & p{
+        word-break: keep-all;
+    }
 }
+
+.sidebar-container.skills{
+    grid-area: skills;
+}
+
+.sidebar-container.lang{
+    grid-area: lang;
+}
+
+.sidebar-container.hobbies{
+    grid-area: hobbies;
+}
+
 
 
 .reveal{
@@ -51,7 +86,27 @@
   }
 
 
-@media(min-width: 768px) {
+
+@media(max-width: 679.9px){
+
+    section.sidebar{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "skills skills"
+        "lang hobbies";
+      }
+  }
+
+@media(min-width: 680px){
+  .sidebar{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "skills lang hobbies";
+    }
+
     .text-container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -59,9 +114,22 @@
         margin: 5% 0;
     }
 
-    .sidebar{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: center;
+    footer > *{
+        padding-left: 40%;
     }
+
+}
+
+@media(min-width: 1350px){
+    .text-container{
+        margin: 5%;
+    }
+
+    // ul.footer > li{
+    //     display: inline-flex;
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: center
+    // }
+
 }
