@@ -8,17 +8,13 @@
 
 
     <meta property="og:title" content="Felicia Gartz Levin CV">
-    <meta property="og:type" content="">
+    <meta property="og:type" content="CV webpage">
     <meta property="og:url" content="">
     <meta property="og:image" content="assets/profilbild.jpg">
 
     <link rel="stylesheet" href="../css/main.css"/>
 </head>
 <body>
-<!-- gör CVt lite som min LinkedIn, med en bakgrundsbild 
-    i navbaren som slutar i profilbild i vänster sida? 
-    Och utrymme för att sedan bläddra ner för mer info -->
-
     <div class="grid-system">
         <header>
             <nav class="navbar">
@@ -26,8 +22,8 @@
 
                 <ul class="nav-menu">
                     <li class="nav-item"><a class="nav-link" href="#">Hem</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Om mig</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Om mig">Om mig</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Kontakt">Kontakt</a></li>
                 </ul>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -38,11 +34,11 @@
             <div class="top-container">
                 <section class="social-icons">
                     <ul>
-                        <li><a class="social-links" href="mailto:felicia.gartz.levin@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                        <li><a class="social-links" href="mailto:felicia.gartz.levin@gmail.com" title="E-mailadress"><i class="fa-solid fa-envelope"></i></a></li>
                         <!-- <li><a class="social-links" href="tel:+46708840650"><i class="fa-solid fa-phone"></i></a></li> -->
-                        <li><a class="social-links" href="https://github.com/FeliciaGartzLevin"><i class="fa-brands fa-github"></i></a></li>
-                        <li><a class="social-links" href="https://www.linkedin.com/in/felicia-gartz-levin-922334240/"><i class="fa-brands fa-linkedin"></i></a></li>
-                        <li><a class="social-links" href="homepage"><i class="fa-solid fa-house"></i></a></li>
+                        <li><a class="social-links" href="https://github.com/FeliciaGartzLevin"><i class="fa-brands fa-github" title="Länk till GitHub"></i></a></li>
+                        <li><a class="social-links" href="https://www.linkedin.com/in/felicia-gartz-levin-922334240/" title="Länk till Linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a class="social-links" href="#"><i class="fa-solid fa-house" title="Länk till hemsida"></i></a></li>
                     </ul>
                 </section>
                 <section class="header-section">
@@ -59,7 +55,7 @@
                 </section>
             </div>
         </header>
-        <main>
+        <main id="Om mig">
             <div class="container">
                 <div class="text-container reveal">
                     <div class="text-box presentation fade-bottom1">
@@ -72,11 +68,13 @@
                     <div class="text-box utbildning">
                         <h2>Utbildning</h2>
                         <div class="heading">
-                            <h3>Front End Developer</h3><span>sept 2022 - maj 2024</span>
+                            <h3>Front End Developer</h3>
+                            <span>sept 2022 - maj 2024</span>
                         </div>
                         <p class="text-box-p">Medieinstitutet i Malmö</p>
                         <div class="heading">
-                            <h3>Pedagogik A + B</h3><span>ht 2015 - vt 2016</span>
+                            <h3>Pedagogik A + B</h3>
+                            <span>vt 2015 - ht 2015</span>
                         </div>
                         <p class="text-box-p">Umeå universitet</p>
                     </div>
@@ -84,9 +82,13 @@
                     <div class="text-box erfarenhet">
                         <h2>Erfarenhet</h2>
                         <div class="heading">
-                        <h3>Personlig assistent</h3><span>okt 2015 - nuvarande extrarbete</span>
+                        <h3>Personlig assistent</h3>
+                        <span>okt 2015 - nuvarande extrarbete</span>
                         </div>
-                        <p class="text-box-p">Tillsvidareanställd med en och samma kund som under tiden haft företagen Assistans För Dig, Humana och Passab. Utöver det har jag i perioder varit extra timanställd hos två andra kunder på Tindra respektive kunds egna assistansbolag.</p>
+                        <p class="text-box-p">
+                            Tillsvidareanställd med en och samma kund som under den tiden haft företagen Assistans För Dig, Humana och Passab. Under det sista ca 1,5 året var jag arbetsledare i assistansgruppen. 
+                            Utöver det har jag i perioder varit extra timanställd hos två andra kunder på Tindra respektive kunds egna assistansbolag.
+                        </p>
                     </div>
                     
                     <div class="text-box extra">
@@ -161,17 +163,17 @@
             </div>
         </section>
         <footer>
-            <div class="footer">
+            <div id="Kontakt" class="footer">
                 <h2>Kontakt</h2>
                 <p class="footer">
                     <ul class="footer">
-                        <li class="li-footer"><i class="fa-regular fa-user"></i>Felicia Gartz Levin</li>
+                        <li class="li-footer"><i class="fa-solid fa-user"></i>Felicia Gartz Levin</li>
                         <li class="li-footer"><i class="fa-solid fa-location-dot"></i>Malmö</li>
-                        <li class="li-footer"><a class="footer-links" href="mailto:felicia.gartz.levin@gmail.com"><i class="fa-solid fa-envelope"></i></a>felicia.gartz.levin@gmail.com</li>
+                        <li class="li-footer"><a class="footer-links" href="mailto:felicia.gartz.levin@gmail.com" title="Länk till e-mailadress"><i class="fa-solid fa-envelope"></i>felicia.gartz.levin@gmail.com</a></li>
                         <!-- ev skippa tlfnnummer här och i toppen? -->
                         <!-- <li class="li-footer"><a class="footer-links" href="tel:+46708840650"><i class="fa-solid fa-phone"></i></a>+46(0)708840650</li> -->
-                        <li class="li-footer"><a class="footer-links" href="https://github.com/FeliciaGartzLevin"><i class="fa-brands fa-github"></i></a>GitHub</li>
-                        <li class="li-footer"><a class="footer-links" href="https://www.linkedin.com/in/felicia-gartz-levin-922334240/"><i class="fa-brands fa-linkedin"></i></a>Linkedin</li>
+                        <li class="li-footer"><a class="footer-links" href="https://github.com/FeliciaGartzLevin"><i class="fa-brands fa-github" title="Länk till GitHub"></i>GitHub</a></li>
+                        <li class="li-footer"><a class="footer-links" href="https://www.linkedin.com/in/felicia-gartz-levin-922334240/" title="Länk till Linkedin"><i class="fa-brands fa-linkedin"></i>Linkedin</a></li>
                         <!-- <li class="li-footer"><a class="footer-links" href="homepage"><i class="fa-solid fa-house"></i></a></li> -->
                     </ul>
                 </p>
