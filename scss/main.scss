@@ -94,11 +94,29 @@ a.social-links{
     text-transform: lowercase;
     color: $lighter-navbar-color;
     width: 100px;
+    overflow: hidden;
+
+    //     & p{
+    //         word-break: keep-all;
+    //     }
+
     // &:after{
     //     content: '➡';
     // }
     // fixa pilen så den kommer på samma rad
 }
+
+@media(max-width: 464px) {
+
+    // måste fixa headern så att den är responsiv
+
+    .social-icons{
+        padding-left: 1rem;
+    }
+
+}
+
+
 
 // -----------------NAVBAR--------------------
 
