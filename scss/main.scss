@@ -35,15 +35,22 @@ li{
 }
 
 header{
-    // background-image: url('../assets/pears.jpg'), linear-gradient(rgba(83, 96, 164, 0.8), rgba(83, 96, 164, 0.8));
     background-color: $navbar-color;
     background-position: center;
     background-size: cover;
     position: relative;
-    width: 100%;
-    min-height: 100vh;
+    width: auto;
+    min-height: 800px;
     background-repeat: no-repeat;
 }
+
+@media(max-width: 500px){
+    header{
+        height: 100vh;
+    }
+    
+}
+
 .nav-logo{
     font-size: 1.5rem;
 }
@@ -52,6 +59,15 @@ img.profile-pic{
     border-radius: 50%;
     width: 18rem;
     height: 18rem;
+}
+
+@media(max-width: 679.9px){
+
+    img.profile-pic{
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+    }
 }
 
 .header-text{
@@ -94,11 +110,10 @@ a.social-links{
     text-transform: lowercase;
     color: $lighter-navbar-color;
     width: 100px;
-    overflow: hidden;
 
-    //     & p{
-    //         word-break: keep-all;
-    //     }
+        & p{
+            word-break: keep-all;
+        }
 
     // &:after{
     //     content: '➡';
