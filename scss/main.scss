@@ -54,8 +54,6 @@ header{
     background-image: radial-gradient(#0000009a, #030303bb), url('../assets/starry-sky.jpg');
     background-position: center;
     background-size: cover; 
-    background-position: center;
-    background-size: cover;
     position: relative;
     width: auto;
     min-height: 800px;
@@ -143,7 +141,7 @@ a.social-links{
     justify-content: space-between;
     align-items: center;
     padding: 0 24px;
-    background-color: #00000061;
+    background-color: #0000007f;
     position: fixed;
     top: 0;
     width: 100%;
@@ -296,6 +294,7 @@ main{
 
 .sidebar{
     border: 5px solid $main-textcolor;
+  
 }
 
 .sidebar-container{
