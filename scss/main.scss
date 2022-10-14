@@ -9,7 +9,6 @@ $darker-navbar-color: #44633f;
 $dark-hobby-icon-color: #0f5656;
 $main-textcolor: white;
 $dark-text-color: black;
-$skillbar-fillcolor: rgb(244, 76, 224);
 $toned-skillbar-color: linear-gradient(0.25turn, #3fa671, #ebf8e1, #0f5656);
 $font-family-Oswald: 'Oswald', sans-serif;
 $font-family-Titillium: 'Titillium Web', sans-serif;
@@ -18,20 +17,6 @@ $font-weights: (
     "regular": 400,
     "bold": 600
 );
-
-// $lighter-navbar-color: #8edaad;
-// $navbar-color: #5a9367;
-// $darker-navbar-color: #44633f;
-
-// $yellow: #fefe00a3;
-// $strong-yellow: #FEFE00;
-// $navbar-color: #5360A4;
-// $darker-navbar-color: #3b4578;
-// $main-textcolor: white;
-// $lighter-navbar-color: #a8b1db;
-// $dark-text-color: black;
-// $skillbar-fillcolor: rgb(244, 76, 224);
-// $toned-skillbar-color: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
 
 *{
     box-sizing: border-box;
@@ -50,8 +35,7 @@ li{
 }
 
 header{
-    background-color: $navbar-color;
-    background-image: radial-gradient(#0000009a, #030303bb), url('../assets/starry-sky.jpg');
+    background-image: radial-gradient(#0000009a, #030303bb), url('../assets/starry-sky.avif');
     background-position: center;
     background-size: cover; 
     position: relative;
@@ -184,55 +168,11 @@ a.nav-link{
     background-color: $main-textcolor;
 }
 
-// kommenterar ut navbaren då den inte behövs (för få menyval)
-// @media(max-width: 768px) {
-
-//     // -------------NAVMENU-------------
-//     .hamburger{
-//         display: block;
-//     }
-
-//     .hamburger.active .bar:nth-child(2){
-//         opacity: 0;    
-//     }
-//     .hamburger.active .bar:nth-child(1){
-//         transform: translateY(8px) rotate(45deg);  
-//     }
-//     .hamburger.active .bar:nth-child(3){
-//         transform: translateY(-8px) rotate(-45deg);  
-//     }
-
-//     .nav-menu{
-//         position: fixed;
-//         left: -100%;
-//         top: 50px;
-//         gap: 0;
-//         flex-direction: column;
-//         justify-content: flex-start;
-//         background-color: $navbar-color;
-//         width: 100%;
-//         height: 100vh;
-//         text-align: center;
-//         transition: 0.3s;
-//         // kan sätta en background på denna t ex linear gradient från ovan så att den fasar ner i annan färg 
-//     }
-
-//     .nav-item{
-//         margin: 16px 0;
-//     }
-
-//     .nav-menu.active{
-//         left: 0;
-//     }
-    
-// }
-
 // ----------- ABOUT SECTION-----------------
 
 main{
-    background-color: $lighter-navbar-color;
     padding: 2rem;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.063),rgba(255, 255, 255, 0.342)) , url('../assets/forest.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.063),rgba(255, 255, 255, 0.342)), url('../assets/forest.avif');
     background-position: center;
     background-size: cover; 
 }
@@ -338,7 +278,6 @@ main{
     width: 0;
     height: 0.5rem;
     border-radius: 10px;
-    background-color: $skillbar-fillcolor;
     background: $toned-skillbar-color;
 
 }
@@ -394,8 +333,7 @@ li.hobbies > i{
 
 footer{
     color: $main-textcolor;
-    background-color: $darker-navbar-color;
-    background-image: linear-gradient(to right, rgba(7, 7, 7, 0.841),rgba(14, 89, 39, 0)) , url('../assets/starry-night.jpg');
+    background-image: linear-gradient(to right, rgba(7, 7, 7, 0.841),rgba(14, 89, 39, 0)) , url('../assets/starry-night.avif');
     background-position: center;
     background-size: cover; 
     min-height: 16rem;

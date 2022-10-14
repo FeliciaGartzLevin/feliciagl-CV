@@ -43,7 +43,7 @@
                 </section>
                 <section class="header-section">
                     <div class="profile-pic">
-                        <img class="profile-pic" src="assets/profilbild.jpg" alt="profilbild av Felicia Gartz Levin">
+                        <img class="profile-pic" src="assets/profilbild.avif" alt="profilbild av Felicia Gartz Levin">
                     </div>
                     <div class="header-text">
                             <h1>Felicia Gartz Levin</h1>
@@ -145,9 +145,9 @@
                 <h2>Språk</h2>
                     <p>
                         <ul class="lang">
-                            <li class="lang"><img class="lang" src="./assets/swedishflag.png" alt="Sveriges flagga"> Svenska (modersmål)</li>
-                            <li class="lang"><img class="lang" src="./assets/UKflag.png" alt="Englands flagga"> Engelska (talar obehindrat)</li>
-                            <li class="lang"><img class="lang" src="./assets/germanflag.png" alt="Tysklands flagga"> Tyska (nybörjare)</li>
+                            <li class="lang"><img class="lang" src="./assets/swedishflag.avif" alt="Sveriges flagga"> Svenska (modersmål)</li>
+                            <li class="lang"><img class="lang" src="./assets/UKflag.avif" alt="Englands flagga"> Engelska (talar obehindrat)</li>
+                            <li class="lang"><img class="lang" src="./assets/germanflag.avif" alt="Tysklands flagga"> Tyska (nybörjare)</li>
                         </ul>
                     </p>
             </div>
@@ -178,7 +178,25 @@
         </footer>
     </div>    
 
-<script src="js/script.js"></script> 
+<script>
+    function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  
+  window.addEventListener("scroll", reveal);
+</script> 
 <script src="https://kit.fontawesome.com/44fc62139d.js" crossorigin="anonymous"></script>
 </body>
 </html>
