@@ -18,6 +18,8 @@ $font-weights: (
     "bold": 600
 );
 
+
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -35,7 +37,7 @@ li{
 }
 
 header{
-    background-image: radial-gradient(#0000009a, #030303bb), url('../assets/starry-sky.avif');
+    background-image: radial-gradient(#0000009a, #030303bb), url('../assets/starry-sky.jpg');
     background-position: center;
     background-size: cover; 
     position: relative;
@@ -90,7 +92,6 @@ a.social-links{
     transition: all .2s ease-in-out; 
 
     &:hover{
-        background-color: none;
         color: $darker-navbar-color;
         transform: scale(1.1);
       }
@@ -105,6 +106,7 @@ a.social-links{
 
         & p{
             word-break: keep-all;
+            overflow-wrap: unset;
         }
 }
 
@@ -137,6 +139,7 @@ a.social-links{
     align-items: center;
     gap: 60px;
     
+    
 }
 
 a.nav-link{
@@ -146,6 +149,7 @@ a.nav-link{
         margin: 0 -.25rem;
         padding: 0 .25rem;
         transition: color .2s ease-in-out, box-shadow .3s ease-in-out;
+        font-family: $font-family-Oswald;
       }
       a.nav-link:hover {
         box-shadow: inset 100px 0 0 0 $strong-yellow;
@@ -172,7 +176,7 @@ a.nav-link{
 
 main{
     padding: 2rem;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.063),rgba(255, 255, 255, 0.342)), url('../assets/forest.avif');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.063),rgba(255, 255, 255, 0.342)), url('../assets/forest.jpg');
     background-position: center;
     background-size: cover; 
 }
@@ -333,7 +337,7 @@ li.hobbies > i{
 
 footer{
     color: $main-textcolor;
-    background-image: linear-gradient(to right, rgba(7, 7, 7, 0.841),rgba(14, 89, 39, 0)) , url('../assets/starry-night.avif');
+    background-image: linear-gradient(to right, rgba(7, 7, 7, 0.841),rgba(14, 89, 39, 0)) , url('../assets/starry-night.jpg');
     background-position: center;
     background-size: cover; 
     min-height: 16rem;
@@ -361,7 +365,6 @@ a.footer-links{
     padding-right: 0.5rem;
 
     &:hover{
-        background-color: none;
         color: $navbar-color;
         text-decoration: none;
         transform: scale(1.1);
