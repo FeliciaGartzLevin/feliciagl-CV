@@ -1,0 +1,836 @@
+/* kan använda css reset */
+
+/* min start */
+
+:root{
+    --beige-color: rgb(235 232 222);
+    --dark-color: rgb(20 27 37);
+    --light-gold: rgb(191, 146, 91);
+    --dark-gold:  rgb(183, 134, 73);
+}
+
+
+*{
+    font-family: 'Poppins', sans-serif; 
+}
+
+h1, h2, h3, h4, h5, h6{
+   text-transform: uppercase;
+   font-family: 'Barlow Semi Condensed', sans-serif;
+   color: var(--dark-gold);
+}
+
+
+a{
+    color: white;
+}
+
+h1{
+    display: inline;
+    color: white;
+    font-family: 'Barlow Semi Condensed';
+    margin-left: 30px;
+    font-size: 28px;
+    padding: 0;
+    margin-top: 3px;
+}
+
+body {
+    margin: 0;
+}
+
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* MAIN NAVBAR */
+
+
+
+.navbar{
+    height: 40px;
+    background-color: var(--dark-color);
+    opacity: 80%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* DROPDOWN MENU */
+
+/* Dropdown Button */
+
+#menu-button{
+    text-transform: uppercase;
+    font-size: 20px;
+    border: none;
+    background-color: var(--dark-color);
+    box-sizing: border-box;
+    text-decoration:none;
+    padding-right: 35px;
+    font-weight: 300;
+    color: var(--beige-color);
+    text-align: center;
+    font-family: 'Poppins', sans-serif; 
+    }
+
+#menu-button:hover{
+    color: var(--light-gold);
+}
+
+li.a-menu{
+    padding: 5px;
+}
+
+.drop-menu{
+    margin: 0;
+    padding: 0
+}
+
+/* dropdown function */
+
+.menu-button + .menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  .menu-button.menu-open + .menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Dropdown Content */
+  .menu{
+    top: 40px;
+    right: 5px;
+    position: inherit;
+    width: 20vw;
+    margin-top: 0;
+    background-color: var(--dark-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+
+  /* Change the background color of the dropdown button when the dropdown content is hovered */
+.a-menu:hover {
+    background-color: black;
+   
+}
+
+/* -----------media queries------------ */
+
+@media screen and (min-width: 800px){
+
+
+    .menu-button + .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-right: 20px;
+        right: 0;
+        top: 3px;
+        width: 70%;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    li{
+        display: inline-block;
+    }
+
+    a.a-menu{
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .a-menu:hover{
+        background-color: transparent;
+    }
+
+}
+
+
+
+/* HEADER-PIC */
+
+.header-div{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.7)) , url('../assets/header-pic.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+/* HEADER-TEXT */
+
+.header-text{
+    position: absolute;
+    top: 25vh;
+    margin: 20px;
+    font-size: 12px;
+    width: 450px;
+}
+
+.welcome{
+    margin-bottom: 0;
+}
+
+.dream-style-header{
+    font-size: 48px;
+    color: rgb(235 232 222);
+    margin-top: 0px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.your-style{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    text-decoration: none;
+    color: transparent;
+      -webkit-text-stroke-width: 0.5px;
+      -webkit-text-stroke-color: white;
+}
+
+.header-info{
+    color: var(--beige-color);
+    margin-bottom: 30px;
+}
+
+/* LEARN BUTTON */
+
+.learn{
+        text-transform: uppercase;
+        display:inline-block;
+        padding:0.35em 1.2em;
+        border: 2px solid var(--dark-gold);
+        margin:0 0.3em 0.3em 0;
+        border-radius:0.12em;
+        box-sizing: border-box;
+        text-decoration:none;
+        font-family: 'Poppins', sans-serif; 
+        font-weight:400;
+        font-size: 16px;
+        color:var(--dark-gold);
+        text-align:center;
+        transition: all 0.2s;
+        background-color: transparent;
+    }
+        
+button.learn:hover{
+    color:var(--dark-gold);
+    background-color:#FFFFFF;
+        }
+
+        /* mediascreen för textrutorna */
+
+@media screen and (min-width: 700px){
+
+    .header-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            right: 20%;
+            top: 25%;
+        }
+    
+    .maintext3{
+        border-left: 1px solid var(--dark-gold);
+        padding-left: 70px;
+        margin-top: 0px;
+        font-size: 14px;
+    }
+
+
+}
+
+
+/* SERVICES-BOXES */
+
+h3.h-services{
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+
+}
+
+.services > div > p{
+    margin-bottom: 100px;
+}
+
+
+
+.services > div.box4 > p{
+    padding-bottom: 18px;
+}
+
+
+.services > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+
+}
+    
+.box1, .box3{
+    background-color: var(--light-gold);
+    color: var(--beige-color);
+}
+
+.box2, .box4{
+    background-color: var(--dark-gold);
+    color: var(--beige-color);    
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+}
+
+.services > div > img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-top: -120px;
+    z-index: 10;
+}
+
+.name-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name-text > *{
+    margin: 5px;
+    font-family: 'Poppins', sans-serif; 
+
+}
+
+.name-text > span{
+    color: var(--dark-gold);
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.name-text > h4{
+    text-transform: none;
+    color: black;
+    font-size: 20px;
+}
+
+
+/* jag fattar att min kod är efterbliven, 
+hade kunnat minska på de skrivna raderna kod, 
+men försöker just nu bara få rätt på grid. */
+
+@media screen and (min-width: 648px){
+
+    .services{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "box1 box2"
+        "box4 box3"
+    }
+
+    .box1{
+        grid-area: box1;
+    }
+
+    .box2{
+        grid-area: box2;
+    }
+
+    .box3{
+        grid-area: box3;
+    }
+
+    .box4{
+        grid-area: box4;
+        
+    }
+
+}
+
+@media screen and (min-width: 1250px){
+
+    .services{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "box1 box2 box3 box4"
+        
+    }
+
+    .box1{
+        grid-area: box1;
+    }
+
+    .box2{
+        grid-area: box2;
+    }
+
+    .box3{
+        grid-area: box3;
+    }
+
+    .box4{
+        grid-area: box4;
+    }
+    .services > div.box4 > p{
+        margin-bottom: auto;
+    }
+
+}
+
+/* ABOUT-SECTION */
+
+.about-img{
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-h2{
+    font-size: 20px;
+}
+
+.about-h3{
+    color: var(--dark-color);
+    font-size: 50px;
+}
+
+.about-h2, h3, p, div.experience {
+    margin: 20px;
+}
+
+
+.experience{
+    background-color: var(--light-gold);
+    color: white; 
+    width: 40%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+}
+
+.twenty-yrs-exp{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    
+}
+
+.calendar-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 20px;
+   }
+
+.twenty{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 0; 
+}
+
+.yrs-exp{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+@media screen and (min-width: 922px){
+     .about-img{
+        height: 100vh;
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    .about{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px;
+        margin-bottom: 0;
+    }
+
+    .experience{
+        width: 280px;
+    }
+
+}
+
+@media screen and (min-width: 1000px){
+    .about-text{
+        padding-top: 30px;
+    }
+}
+
+
+
+/* TESTIMONIALS */
+
+.quotation-marks{
+    height: 40px;
+    width: 40px;
+    background-color: var(--light-gold);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    top: -20px;
+    left: 20px;
+    margin-bottom: 0;
+}
+
+.testimonials{
+    background-color: var(--beige-color);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    clear: left;
+}
+
+.testimonials-p{
+    color: var(--dark-color);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.testimonials-h2{
+    font-size: 15px;
+    margin-bottom: 0;
+    margin-top: 40px;
+}
+.testimonials-about{
+    color: var(--dark-color);
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.man > img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.card-a, .card-b, .card-c:not(first-child){
+    background-color: white;
+    margin: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonials-header{
+    grid-area: testimonials-header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-a{
+    grid-area: card-a;
+}
+
+.card-b{
+    grid-area: card-b;
+}
+
+.card-c{
+    grid-area: card-c;
+    margin-bottom: 50px;
+}
+
+.text-and-pic{
+    display: flex;
+}
+
+.slideshow-container{
+    grid-area: slideshow-container;
+}
+
+    /* CAROUSEL FOR TESTIMONIAL CARDS
+    jag lyckas tyvärr inte disable javascripten och få 
+    in alla bilderna samtidigt på skärmen när skärmen blir bredare  */
+
+    @media screen and (max-width: 799.9px){
+        
+
+.testimonials > *{
+    box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 749px;
+  position: relative;
+  margin: auto;
+
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  margin-top: 5px;
+  margin-bottom: 50px;
+}
+
+.active, .dot:hover {
+  background-color: var(--dark-gold);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+        
+}
+
+@media screen and (min-width: 800px){
+
+    .mySlides{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .next, .prev{
+        display: none;
+        visibility: hidden;
+    }
+
+    .testimonials{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "testimonials-header"
+        "slideshow-container"
+    }
+
+    .slideshow-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "card-a card-b card-c";
+    
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+
+    .testimonials{
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 0.1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        ". testimonials-header ."
+        ". slideshow-container .";
+        padding-bottom: 60px;
+    } 
+
+    .card-c{
+        margin-bottom: auto;
+
+    }  
+}
+
+/* FOOTER */
+
+
+footer{
+    background-color: black;
+}
+
+.footer > h4{
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+a:hover{
+    color: var(--light-gold);
+}
+
+ul.contact > li > a::before{
+    content: '>';
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    margin-right: 5px;
+    margin-left: 0;
+  
+}
+
+ul.contact > li {
+    display: block;
+}
+
+.logos > *{
+    height: 40px;
+    width: 40px;
+    background-color: var(--light-gold);
+    border-radius: 50%;
+    font-size: 15px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.logos{
+    display: flex;
+    padding: 5px;
+    grid-area: logos;
+}
+
+.footer-info{
+    grid-area: footer-info;
+}
+
+.footer-explore{
+    grid-area: footer-explore;
+}
+
+.footer-questions{
+    grid-area: footer-questions;
+}
+
+.contact > i{
+    color: var(--light-gold);
+    margin: 10px 10px 10px 5px;
+}
+
+.contact{
+    margin-left: 10px;
+    padding-bottom: 50px;
+}
+/* 
+jag lyckas tyvärr inte dölja denna text för att sedan 
+ta fram den i större format
+@media screen and (max-width: 619.9px){
+
+    .footer-barbershop, .footer-barbershop > *{
+        display: none;
+        visibility: hidden;
+    }
+} */
+
+@media screen and (min-width: 620px){
+
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "logos footer-info"
+        "footer-explore footer-questions";
+        padding: 10px;
+    }
+
+    .logos{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+}
+
+@media screen and (min-width: 860px){
+
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "logos footer-info footer-explore footer-questions";
+        padding: 10px;
+    }  
+
+    .logos{
+        align-items: center;
+    }
+}
