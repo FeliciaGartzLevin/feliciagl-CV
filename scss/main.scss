@@ -131,6 +131,8 @@ a.social-links{
     position: fixed;
     top: 0;
     width: 100%;
+    flex-wrap: nowrap;
+    word-wrap: unset;
 }
 
 .nav-menu{
@@ -138,8 +140,12 @@ a.social-links{
     justify-content: space-between;
     align-items: center;
     gap: 60px;
+
+    & > li.om-mig{
+        width: 53px;
+        text-align: center;
     
-    
+    }
 }
 
 a.nav-link{
@@ -150,11 +156,13 @@ a.nav-link{
         padding: 0 .25rem;
         transition: color .2s ease-in-out, box-shadow .3s ease-in-out;
         font-family: $font-family-Oswald;
+
+        &:hover {
+            box-shadow: inset 100px 0 0 0 $strong-yellow;
+            color: $dark-text-color;
+          }
       }
-      a.nav-link:hover {
-        box-shadow: inset 100px 0 0 0 $strong-yellow;
-        color: $dark-text-color;
-      }
+     
 
 .hamburger{
     display: none;
