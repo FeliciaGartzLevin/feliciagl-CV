@@ -165,7 +165,7 @@ a.nav-link{
      
 
 .hamburger{
-    display: none;
+    display: none; //make visible in small screens with mediaqueries
     cursor: pointer;
 }
 
@@ -246,15 +246,13 @@ main{
 
 .sidebar{
     border: 5px solid $main-textcolor;
-    
-  
+
 }
 
 .sidebar-container{
-    font-family: $font-family-Oswald;
-    background-color: $navbar-color;
-    background: radial-gradient($navbar-color, $darker-navbar-color);
-    color: $main-textcolor;
+    // background-color: $navbar-color;
+    // background: radial-gradient($navbar-color, $darker-navbar-color);
+    color: $dark-text-color;
     border: 5px solid $main-textcolor;
     padding: 1rem;
     transition: all .2s ease-in-out; 
@@ -265,12 +263,16 @@ main{
 
 }
 
-.sidebar > div:nth-child(2){
-    background-color: $lighter-navbar-color;
-    background: radial-gradient(white, $lighter-navbar-color);
-    color: $dark-text-color;  
+.skill{
+    font-weight: 600;
 }
 
+/* .sidebar > div:nth-child(2){
+    // background-color: $lighter-navbar-color;
+    // background: radial-gradient(white, $lighter-navbar-color);
+    color: $dark-text-color;  
+}
+ */
 // ------------skillbars------------------------
 /*
 .skillcontainer{
@@ -337,6 +339,11 @@ li.hobbies > i{
     padding-right: 0.5rem;
     color: $dark-hobby-icon-color;
 
+}
+
+.sidebar-img{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.156),rgba(255, 255, 255, 0.342)), url('../assets/beach.jpg');
+    background-attachment: fixed;
 }
 
 // --------------------FOOTER-----------------
