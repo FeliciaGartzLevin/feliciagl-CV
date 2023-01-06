@@ -246,10 +246,12 @@ main{
 
 .sidebar{
     border: 5px solid $main-textcolor;
+    
   
 }
 
 .sidebar-container{
+    font-family: $font-family-Oswald;
     background-color: $navbar-color;
     background: radial-gradient($navbar-color, $darker-navbar-color);
     color: $main-textcolor;
@@ -261,10 +263,6 @@ main{
         border: 5px solid $main-textcolor;
     }
 
-    &.skills > h2:nth-child(1){
-        margin-bottom: 1rem;
-    }
-
 }
 
 .sidebar > div:nth-child(2){
@@ -274,12 +272,12 @@ main{
 }
 
 // ------------skillbars------------------------
-
+/*
 .skillcontainer{
     width: 100%;
     margin-bottom: 10px;
 }
-.skillbar{
+ .skillbar{
     position: relative;
     border-radius: 20px;
     background-color: $main-textcolor;
@@ -290,7 +288,7 @@ main{
     width: 0;
     height: 0.5rem;
     border-radius: 10px;
-    background: $toned-skillbar-color;
+    background: $toned-skillbar-color; 
 
 }
 
@@ -298,7 +296,7 @@ main{
     margin: 0.5rem 0;
 }
 
-#html-bar{
+ #html-bar{
     animation: html-fill 2s forwards;
 }
 @keyframes html-fill{
@@ -323,7 +321,7 @@ main{
     100%{
         width: 5%;
     }
-}
+} */
 
 // -------skillbars end-----
 
