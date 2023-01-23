@@ -165,7 +165,7 @@ a.nav-link{
      
 
 .hamburger{
-    display: none;
+    display: none; //make visible in small screens with mediaqueries
     cursor: pointer;
 }
 
@@ -246,13 +246,15 @@ main{
 
 .sidebar{
     border: 5px solid $main-textcolor;
-  
+
 }
+// lägg in denna i skills istället kanske?: 
+// animated slide revieling text: https://codepen.io/alvarotrigo/pen/PoKMyWE
 
 .sidebar-container{
-    background-color: $navbar-color;
-    background: radial-gradient($navbar-color, $darker-navbar-color);
-    color: $main-textcolor;
+    // background-color: $navbar-color;
+    // background: radial-gradient($navbar-color, $darker-navbar-color);
+    color: $dark-text-color;
     border: 5px solid $main-textcolor;
     padding: 1rem;
     transition: all .2s ease-in-out; 
@@ -261,71 +263,19 @@ main{
         border: 5px solid $main-textcolor;
     }
 
-    &.skills > h2:nth-child(1){
-        margin-bottom: 1rem;
-    }
-
 }
 
-.sidebar > div:nth-child(2){
-    background-color: $lighter-navbar-color;
-    background: radial-gradient(white, $lighter-navbar-color);
-    color: $dark-text-color;  
+.skill{
+    font-weight: 600;
 }
 
-// ------------skillbars------------------------
 
-.skillcontainer{
-    width: 100%;
-    margin-bottom: 10px;
-}
-.skillbar{
-    position: relative;
-    border-radius: 20px;
-    background-color: $main-textcolor;
-  
-}
-.skillbar div{
-    position: relative;
-    width: 0;
-    height: 0.5rem;
-    border-radius: 10px;
-    background: $toned-skillbar-color;
+// ------------skillanimation------------------------
 
-}
 
-.skillcontainer2{
-    margin: 0.5rem 0;
-}
 
-#html-bar{
-    animation: html-fill 2s forwards;
-}
-@keyframes html-fill{
-    100%{
-        width: 75%;
-    }
-}
+// ------------skillanimation end------------------------
 
-#css-bar{
-    animation: css-fill 2s forwards;
-}
-@keyframes css-fill{
-    100%{
-        width: 50%;
-    }
-}
-
-#js-bar{
-    animation: js-fill 2s forwards;
-}
-@keyframes js-fill{
-    100%{
-        width: 5%;
-    }
-}
-
-// -------skillbars end-----
 
 img.lang{
     
@@ -339,6 +289,11 @@ li.hobbies > i{
     padding-right: 0.5rem;
     color: $dark-hobby-icon-color;
 
+}
+
+.sidebar-img{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.449),rgba(13, 43, 177, 0.647)), url('../assets/beach.jpg');
+    background-attachment: fixed;
 }
 
 // --------------------FOOTER-----------------
