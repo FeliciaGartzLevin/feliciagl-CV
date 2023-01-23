@@ -269,65 +269,13 @@ main{
     font-weight: 600;
 }
 
-/* .sidebar > div:nth-child(2){
-    // background-color: $lighter-navbar-color;
-    // background: radial-gradient(white, $lighter-navbar-color);
-    color: $dark-text-color;  
-}
- */
-// ------------skillbars------------------------
-/*
-.skillcontainer{
-    width: 100%;
-    margin-bottom: 10px;
-}
- .skillbar{
-    position: relative;
-    border-radius: 20px;
-    background-color: $main-textcolor;
-  
-}
-.skillbar div{
-    position: relative;
-    width: 0;
-    height: 0.5rem;
-    border-radius: 10px;
-    background: $toned-skillbar-color; 
 
-}
+// ------------skillanimation------------------------
 
-.skillcontainer2{
-    margin: 0.5rem 0;
-}
 
- #html-bar{
-    animation: html-fill 2s forwards;
-}
-@keyframes html-fill{
-    100%{
-        width: 75%;
-    }
-}
 
-#css-bar{
-    animation: css-fill 2s forwards;
-}
-@keyframes css-fill{
-    100%{
-        width: 50%;
-    }
-}
+// ------------skillanimation end------------------------
 
-#js-bar{
-    animation: js-fill 2s forwards;
-}
-@keyframes js-fill{
-    100%{
-        width: 5%;
-    }
-} */
-
-// -------skillbars end-----
 
 img.lang{
     
@@ -344,7 +292,7 @@ li.hobbies > i{
 }
 
 .sidebar-img{
-    background-image: linear-gradient(rgba(255, 255, 255, 0.156),rgba(255, 255, 255, 0.342)), url('../assets/beach.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.449),rgba(13, 43, 177, 0.647)), url('../assets/beach.jpg');
     background-attachment: fixed;
 }
 
