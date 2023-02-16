@@ -1,43 +1,42 @@
-// kommenterar ut navbaren då den inte behövs (för få menyval)
+$navbar-color: #5a9367;
 
-// @media(max-width: 768px) {
+@media(max-width: 768px) {
 
-//     // -------------NAVMENU-------------
-//     .hamburger{
-//         display: block;
-//     }
+    // -------------NAVMENU-------------
+    .hamburger{
+        display: block;
+    }
 
-//     .hamburger.active .bar:nth-child(2){
-//         opacity: 0;    
-//     }
-//     .hamburger.active .bar:nth-child(1){
-//         transform: translateY(8px) rotate(45deg);  
-//     }
-//     .hamburger.active .bar:nth-child(3){
-//         transform: translateY(-8px) rotate(-45deg);  
-//     }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;    
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);  
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);  
+    }
 
-//     .nav-menu{
-//         position: fixed;
-//         left: -100%;
-//         top: 50px;
-//         gap: 0;
-//         flex-direction: column;
-//         justify-content: flex-start;
-//         background-color: $navbar-color;
-//         width: 100%;
-//         height: 100vh;
-//         text-align: center;
-//         transition: 0.3s;
-//         // kan sätta en background på denna t ex linear gradient från ovan så att den fasar ner i annan färg 
-//     }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 50px;
+        gap: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: $navbar-color;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: 0.3s;
+    }
 
-//     .nav-item{
-//         margin: 16px 0;
-//     }
+    .nav-item{
+        margin: 16px 0; 
+    }
 
-//     .nav-menu.active{
-//         left: 0;
-//     }
+    .nav-menu.active{
+        left: 0;
+    }
     
-// }
+}

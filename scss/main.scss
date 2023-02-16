@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&family=Titillium+Web:wght@200;400;600&display=swap');
 @import './layout';
+@import './navbar';
 
 $yellow: #fefe00a3;
 $strong-yellow: #FEFE00;
@@ -137,9 +138,8 @@ a.social-links{
 
 .nav-menu{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 60px;
+    gap: 30px;
 
     & > li.om-mig{
         width: 53px;
@@ -163,10 +163,17 @@ a.nav-link{
           }
       }
      
-
-.hamburger{
-    display: none; //make visible in small screens with mediaqueries
-    cursor: pointer;
+@media(max-width: 768px) {
+    .hamburger{
+        display: block; //make visible in small screens with mediaqueries
+        cursor: pointer;
+    }
+}
+@media(min-width: 768.1px) {
+    .hamburger{
+        display: none; //make visible in small screens with mediaqueries
+        cursor: pointer;
+    }
 }
 
 .bar{
